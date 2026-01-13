@@ -109,19 +109,19 @@ Use **Test-Driven Development**:
    ```bash
    # Create test file
    # Run to confirm it fails
-   STRIPE_SECRET_KEY="sk_test_mock" npx vitest run {test-file}
+   npx vitest run {test-file}
    ```
 
 2. **GREEN** - Write minimum code to pass
    ```bash
    # Implement the feature
-   STRIPE_SECRET_KEY="sk_test_mock" npx vitest run {test-file}
+   npx vitest run {test-file}
    ```
 
 3. **REFACTOR** - Clean up while keeping tests green
    ```bash
    pnpm lint && pnpm typecheck
-   STRIPE_SECRET_KEY="sk_test_mock" npx vitest run
+   npx vitest run
    ```
 
 ### 6. Commit Changes
@@ -138,7 +138,6 @@ feat({scope}): {task description}
 
 Part of #{issue-number}
 
-Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 EOF
 )"
 ```

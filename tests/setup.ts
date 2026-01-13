@@ -1,5 +1,16 @@
 import { cleanup } from "@testing-library/react";
 import { afterEach, vi } from "vitest";
+import "@testing-library/jest-dom/vitest";
+
+// Mock ResizeObserver for Recharts
+global.ResizeObserver = class ResizeObserver {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
+// Mock scrollIntoView for Command (cmdk)
+Element.prototype.scrollIntoView = vi.fn();
 
 // Cleanup after each test
 afterEach(() => {
