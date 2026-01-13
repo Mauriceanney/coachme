@@ -291,7 +291,6 @@ This reverts commit abc1234.
 Reason: OAuth integration causing session conflicts.
 Will re-implement with proper session handling.
 
-Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 EOF
 )"
 ```
